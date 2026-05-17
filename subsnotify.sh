@@ -19,7 +19,7 @@ touch "$LOCKFILE"
 # -----------------------------
 
 BIN="/usr/local/bin"
-WORK="/root/recon"
+WORK="$(pwd)/data"
 
 TARGETS="$WORK/targets.txt"
 OLD_SUBS="$WORK/old_subs.txt"
