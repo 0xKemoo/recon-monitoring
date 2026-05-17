@@ -1,65 +1,133 @@
 # Recon Monitoring
 
+<p align="center">
+  <img src="assets/banner.png" width="100%">
+</p>
+
+<p align="center">
 Automated reconnaissance and attack surface monitoring pipeline.
+</p>
 
-## Features
+---
 
-- Subdomain discovery
-- Live host checking
-- Nuclei scanning
-- Telegram alerts
-- Auto deduplication
+# Features
 
-## Tools
+* Continuous reconnaissance
+* Subdomain discovery
+* Live host detection
+* Automated nuclei scanning
+* Telegram notifications
+* Auto deduplication
+* Lockfile protection
 
-- subfinder
-- assetfinder
-- httpx
-- nuclei
+---
+
+# Tools
+
+* subfinder
+* assetfinder
+* httpx
+* nuclei
+* curl
+
+---
+
+# Installation
+
+```bash
+git clone https://github.com/0xKemoo/recon-monitoring.git
+
+cd recon-monitoring
+
+chmod +x subs-notify.sh
+```
 
 ---
 
 # First Time Setup
 
-## 1. Make script executable
-
-```bash
-chmod +x subsnotify.sh
-. Edit Telegram configuration
+## 1. Configure Telegram
 
 Open:
 
-nano subsnotify.sh
+```bash
+nano subs-notify.sh
+```
 
-Add your Telegram bot token and chat ID:
+Add:
 
+```bash
 TOKEN="YOUR_BOT_TOKEN"
 CHAT_ID="YOUR_CHAT_ID"
+```
 
 Example:
 
+```bash
 TOKEN="123456:ABCDEF"
 CHAT_ID="123456789"
+```
 
-Save and exit.
+---
 
-3. Add targets
+## 2. Add targets
 
-Open the file:
+Open:
 
+```bash
 nano recon/targets.txt
+```
 
-Add your targets:
+Example:
 
+```text
 example.com
 target.com
+```
 
-Save the file.
+---
 
-4. Run reconnaissance
-./subsnotify.sh
-Cron Example
+# Usage
+
+```bash
+./subs-notify.sh
+```
+
+---
+
+# Cron Example
 
 Run every 6 hours:
 
-0 */6 * * * /path/to/subsnotify.sh >> /tmp/recon.log 2>&1
+```bash
+0 */6 * * * /path/to/subs-notify.sh >> /tmp/recon.log 2>&1
+```
+
+---
+
+# Output
+
+* New subdomains
+* Live hosts
+* Nuclei findings
+* Telegram alerts
+
+---
+
+# Repository Structure
+
+```text
+recon-monitoring/
+├── assets/
+├── recon/
+│   ├── targets.txt
+│   └── old_subs.txt
+├── README.md
+└── subs-notify.sh
+```
+
+---
+
+# Disclaimer
+
+This project is intended for authorized security testing and educational purposes only.
