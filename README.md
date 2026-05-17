@@ -113,6 +113,23 @@ Run every 6 hours:
 * Telegram alerts
 
 ---
+# Screenshots
+
+## Terminal Output
+
+<p align="center">
+  <img src="assets/terminal.png" width="90%">
+</p>
+
+---
+
+## Telegram Alert
+
+<p align="center">
+  <img src="assets/telegram.png" width="60%">
+</p>
+
+---
 
 # Repository Structure
 
