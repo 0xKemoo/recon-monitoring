@@ -20,5 +20,5 @@ Automated reconnaissance and attack surface monitoring pipeline.
 ## Usage
 
 ```bash
-chmod +x recon.sh
-./recon.sh
+chmod +x subsnotify.sh
+./subsnotify.sh
